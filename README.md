@@ -1,24 +1,37 @@
 # react-native-mhs-design-system
 
-design system for mhs app using react native
+a library built for the management design system and utility of the Multi Study Highschool Batam application which was designed using Stack React Native
 
 ## Installation
 
 ```sh
 npm install react-native-mhs-design-system
+
+or
+
+yarn add install react-native-mhs-design-system
 ```
 
 ## Usage
 
-
 ```js
-import { multiply } from 'react-native-mhs-design-system';
+// import the library
+import { theme, utils } from 'react-native-mhs-design-system';
 
 // ...
 
-const result = await multiply(3, 7);
+// define theme or utils
+const {
+  COLORS,
+  COLORS_PALETTE,
+  FONTS,
+  SIGNATURE_STYLE,
+  SIZE,
+  SYSTEMFONTS,
+  TAGSTYLES,
+} = theme;
+const { getFontSize } = utils;
 ```
-
 
 ## Contributing
 

@@ -1,2 +1,10 @@
-export { COLORS, COLORS_PALETTE, FONTS, SIZE } from './themes';
+export {
+  COLORS,
+  COLORS_PALETTE,
+  FONTS,
+  SIGNATURE_STYLE,
+  SIZE,
+  SYSTEMFONTS,
+  TAGSTYLES,
+} from './themes';
 export type { Theme } from './themes';

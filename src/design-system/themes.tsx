@@ -1,4 +1,6 @@
-import { Dimensions } from 'react-native';
+import { Dimensions, type Falsy, type RecursiveArray } from 'react-native';
+import { defaultSystemFonts } from 'react-native-render-html';
+import { getFontSize } from '../utils';
 import { createFontStyle, createTransparencyObject, opacities } from './helper';
 
 const { width, height } = Dimensions.get('screen');
@@ -212,4 +214,77 @@ export const FONTS: Theme['FONTS'] = {
   body1: createFontStyle('Manrope-Regular', 14, 22),
   body2: createFontStyle('Manrope-Regular', 12, 18),
   body3: createFontStyle('Manrope-Regular', 10, 16),
+};
+
+export const SIGNATURE_STYLE =
+  '.m-signature-pad--footer {display: none; margin: 0px;}';
+
+/**
+ * react-native-render-html
+ */
+type NonRegisteredStylesProp<T> = T | Falsy | RecursiveArray<T | Falsy>;
+type StylesDictionary = {
+  [tag: string]: NonRegisteredStylesProp<any>;
+};
+
+export const SYSTEMFONTS = [
+  ...defaultSystemFonts,
+  'Manrope-Regular',
+  'Manrope-Bold',
+];
+export const TAGSTYLES: StylesDictionary = {
+  body: {
+    lineHeight: getFontSize(22),
+    color: COLORS.dark[400],
+    fontFamily: 'Manrope-Regular',
+    fontSize: getFontSize(14),
+    textAlign: 'justify',
+  },
+
+  strong: {
+    color: COLORS.dark[500],
+    fontSize: getFontSize(14),
+    fontFamily: 'Manrope-Bold',
+  },
+  h1: {
+    color: COLORS.dark[500],
+    fontSize: getFontSize(14),
+    lineHeight: getFontSize(22),
+  },
+  h2: {
+    color: COLORS.dark[500],
+    fontSize: getFontSize(22),
+    fontFamily: 'Manrope-Bold',
+    fontWeight: 'normal',
+    lineHeight: getFontSize(22),
+  },
+  h3: {
+    fontSize: getFontSize(16),
+    color: COLORS.dark[500],
+    fontWeight: 'normal',
+    fontFamily: 'Manrope-Bold',
+    lineHeight: getFontSize(22),
+  },
+  h4: {
+    fontSize: getFontSize(16),
+    color: COLORS.dark[500],
+    fontWeight: 'normal',
+    fontFamily: 'Manrope-Bold',
+    lineHeight: getFontSize(22),
+  },
+  p: {
+    lineHeight: getFontSize(22),
+    margin: 5,
+  },
+
+  ol: {
+    color: COLORS.dark[500],
+    fontSize: getFontSize(13),
+    fontWeight: 'normal',
+  },
+  li: {
+    color: COLORS.dark[400],
+    fontSize: getFontSize(13),
+    fontWeight: 'normal',
+  },
 };
