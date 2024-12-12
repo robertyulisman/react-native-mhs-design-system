@@ -1,7 +1,7 @@
 {
   "name": "react-native-mhs-design-system",
-  "version": "0.1.1",
-  "types": "index.d.ts",
+  "version": "0.1.2",
+  "types": "./lib/typescript/commonjs/src/index.d.ts",
   "description": "design system for mhs app using react native",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
@@ -44,7 +44,8 @@
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli lib",
     "prepare": "bob build",
-    "release": "release-it"
+    "release": "release-it",
+    "publish": "npm publish --access public"
   },
   "keywords": [
     "react-native",
