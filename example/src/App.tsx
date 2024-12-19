@@ -1,12 +1,15 @@
-import { Text, View, StyleSheet } from 'react-native';
-import { multiply } from 'react-native-mhs-design-system';
+import { StyleSheet, View } from 'react-native';
+import { Button, Text, theme } from 'react-native-mhs-design-system';
 
-const result = multiply(3, 7);
+const { COLORS } = theme;
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text variant="heading-1" style={{ color: COLORS.primary['500'] }}>
+        Result: {5}
+      </Text>
+      <Button title="tesad" primary />
     </View>
   );
 }
