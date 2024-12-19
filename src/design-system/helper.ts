@@ -1,4 +1,4 @@
-import getFontSize from '../utils/get-font-size';
+import { getFontSize } from '../utils';
 
 export type OpacityType = 10 | 25 | 50 | 75 | 90;
 export type TransparencyType = {

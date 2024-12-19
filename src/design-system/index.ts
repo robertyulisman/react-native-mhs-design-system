@@ -7,4 +7,5 @@ export {
   SYSTEMFONTS,
   TAGSTYLES,
 } from './themes';
-export type { Theme } from './themes';
+
+export type { Theme } from './type';
