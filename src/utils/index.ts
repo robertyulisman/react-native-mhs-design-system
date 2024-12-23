@@ -17,6 +17,7 @@ export {
   greetingText,
   kontakAdmin,
 } from './globalFunction';
+export { default as imageResizer } from './imageResizer';
 export { default as parseKBtoMB } from './parseKBtoMB';
 export { sortMonths } from './shortMonths';
 export { default as whatsappFormatted } from './whatsappFormatted';

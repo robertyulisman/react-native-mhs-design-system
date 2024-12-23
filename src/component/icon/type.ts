@@ -35,13 +35,13 @@ export type iconProps = {
    * width of icons
    * @default 22
    */
-  width: number;
+  width?: number;
 
   /**
    * height of icons
    * @default 22
    */
-  height: number;
+  height?: number;
 
   /**
    * tint color of icons

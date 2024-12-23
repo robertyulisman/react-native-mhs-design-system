@@ -10,7 +10,6 @@ const App: FC<IAppProps> = () => {
       <Text variant="heading-1" style={{ color: theme.COLORS.dark['400'] }}>
         test
       </Text>
-
       <Button title="tesad" primary />
     </View>
   );
