@@ -10,6 +10,6 @@ export type * from './paragraf/type';
 export type * from './radio-button/type';
 export type * from './separator/type';
 export type * from './text-highligted/type';
-export type * from './text-input/index';
+export type * from './text-input/type';
 export type * from './text/type';
 export type * from './toast/type';
