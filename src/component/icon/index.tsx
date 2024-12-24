@@ -1,6 +1,5 @@
 import type { FC } from 'react';
 import { Image, StyleSheet, View } from 'react-native';
-import { COLORS } from '../../design-system';
 import type { iconProps } from './type';
 
 const Icon: FC<iconProps> = (props) => {
@@ -11,7 +10,7 @@ const Icon: FC<iconProps> = (props) => {
     name,
     containerStyle,
     imageStyle,
-    tintColor = COLORS.dark[500],
+    tintColor,
   } = props;
   return (
     <View style={[styles.container, { width, height }, containerStyle]}>

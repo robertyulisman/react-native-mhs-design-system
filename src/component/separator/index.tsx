@@ -1,12 +1,7 @@
 import type { FC } from 'react';
-import { StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { COLORS } from '../../design-system';
-
-type SeparatorProps = {
-  dashed?: boolean;
-  high?: boolean;
-  style?: StyleProp<ViewStyle>;
-};
+import type { SeparatorProps } from './type';
 
 const Separator: FC<SeparatorProps> = ({ dashed, high, style }) => {
   return (

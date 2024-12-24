@@ -17,6 +17,7 @@ export {
   InputNumber,
   InputPassword,
   InputPhone,
+  InputWhatsapp,
   Paragraf,
   RadioButton,
   Separator,
@@ -28,4 +29,5 @@ export * as theme from './design-system';
 export * as libs from './libs';
 export * as utils from './utils';
 
-export type { Theme } from './design-system/type';
+export type * from './component/type';
+export type * from './design-system/type';
