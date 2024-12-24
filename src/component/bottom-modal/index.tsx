@@ -11,11 +11,9 @@ const BottomModal: FC<PropsWithChildren<IBottomModalProps>> = ({
   onClose,
   style,
   showIndicator = true,
-  ...rest
 }) => {
   return (
     <Modal
-      {...rest}
       isVisible={open}
       onBackButtonPress={onClose}
       onBackdropPress={onClose}
