@@ -8,3 +8,4 @@ export { default as InputFileUpload } from './input-file-upload';
 export { default as InputNumber } from './input-number';
 export { default as InputPassword } from './input-password';
 export { default as InputPhone } from './input-phone';
+export { default as InputWhatsapp } from './input-whatsapp';

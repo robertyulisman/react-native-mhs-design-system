@@ -92,5 +92,6 @@ export const ICONS = {
     search: require('./input/search.png'),
     upload: require('./input/upload.png'),
     user: require('./input/user.png'),
+    whatsapp: require('./input/whatsapp.png'),
   },
 };

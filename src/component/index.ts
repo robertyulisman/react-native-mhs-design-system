@@ -22,5 +22,6 @@ export {
   InputNumber,
   InputPassword,
   InputPhone,
+  InputWhatsapp,
 } from './text-input';
 export { default as Toast } from './toast';
