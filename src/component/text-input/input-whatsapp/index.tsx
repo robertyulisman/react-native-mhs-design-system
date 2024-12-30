@@ -8,7 +8,7 @@ import {
   useState,
 } from 'react';
 import { TextInput, View } from 'react-native';
-import { ICONS } from '../../../assets/icon';
+import { ICONS } from '../../../assets/icons';
 import { COLORS, FONTS } from '../../../design-system';
 import Text from '../../text';
 import RenderIcon from '../component/render-icon';

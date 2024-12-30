@@ -1,54 +1,14 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import {
   Animated,
   type GestureResponderEvent,
   StyleSheet,
   Text,
-  type TextStyle,
   TouchableWithoutFeedback,
-  type ViewStyle,
 } from 'react-native';
+import type { ISwitchProps, ISwitchState } from './type';
 
-export interface SwitchProps {
-  testID?: string; // Changed to only string | undefined
-  onValueChange?: (value: boolean) => void;
-  disabled?: boolean;
-  activeText?: string;
-  inActiveText?: string;
-  backgroundActive?: string;
-  backgroundInactive?: string;
-  value?: boolean;
-  circleActiveColor?: string;
-  circleInActiveColor?: string;
-  circleSize?: number;
-  circleBorderActiveColor?: string;
-  circleBorderInactiveColor?: string;
-  activeTextStyle?: TextStyle;
-  inactiveTextStyle?: TextStyle;
-  containerStyle?: ViewStyle;
-  barHeight?: number | null;
-  circleBorderWidth?: number;
-  innerCircleStyle?: ViewStyle;
-  renderInsideCircle?: () => React.ReactNode;
-  changeValueImmediately?: boolean;
-  outerCircleStyle?: ViewStyle;
-  renderActiveText?: boolean;
-  renderInActiveText?: boolean;
-  switchLeftPx?: number;
-  switchRightPx?: number;
-  switchWidthMultiplier?: number;
-  switchBorderRadius?: number | null;
-}
-
-interface SwitchState {
-  value: boolean;
-  transformSwitch: Animated.Value;
-  backgroundColor: Animated.Value;
-  circleColor: Animated.Value;
-  circleBorderColor: Animated.Value;
-}
-
-export class Switch extends Component<SwitchProps, SwitchState> {
+export default class Switch extends Component<ISwitchProps, ISwitchState> {
   static defaultProps = {
     value: false,
     onValueChange: () => null,
@@ -77,7 +37,7 @@ export class Switch extends Component<SwitchProps, SwitchState> {
     testID: null,
   };
 
-  constructor(props: SwitchProps) {
+  constructor(props: ISwitchProps) {
     super(props);
 
     this.state = {
@@ -93,7 +53,7 @@ export class Switch extends Component<SwitchProps, SwitchState> {
     };
   }
 
-  componentDidUpdate(prevProps: SwitchProps) {
+  componentDidUpdate(prevProps: ISwitchProps) {
     const { value = false, disabled } = this.props; // Default to false if value is undefined
 
     if (prevProps.value === value) {

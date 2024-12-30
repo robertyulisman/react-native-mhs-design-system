@@ -18,7 +18,7 @@ import {
 import ImageView from 'react-native-image-viewing';
 import Modal from 'react-native-modal';
 import { PERMISSIONS, RESULTS, check, request } from 'react-native-permissions';
-import { ICONS } from '../../../assets/icon';
+import { ICONS } from '../../../assets/icons';
 import { COLORS } from '../../../design-system';
 import { imageResizer } from '../../../utils';
 import Icon from '../../icon';

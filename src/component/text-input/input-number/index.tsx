@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-shadow */
 import { type FC, useEffect, useState } from 'react';
 import { TouchableOpacity, View } from 'react-native';
-import { ICONS } from '../../../assets/icon';
+import { ICONS } from '../../../assets/icons';
 import { COLORS } from '../../../design-system';
 import Icon from '../../icon';
 import Text from '../../text';

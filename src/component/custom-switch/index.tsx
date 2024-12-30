@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import { StyleSheet } from 'react-native';
 import { COLORS } from '../../design-system';
-import { Switch } from '../../modules/switch';
+import { Switch } from '../../modules';
 import type { ICustomSwitch } from './type';
 
 const CustomSwitch: FC<ICustomSwitch> = ({ ...rest }) => {

@@ -1,7 +1,7 @@
 import { type FC, useEffect, useState } from 'react';
 import { ScrollView, StyleSheet, TouchableOpacity, View } from 'react-native';
 import Modal from 'react-native-modal';
-import { ICONS } from '../../../assets/icon';
+import { ICONS } from '../../../assets/icons';
 import { COLORS } from '../../../design-system';
 import isEmpty from '../../../validation/is-empty';
 import Icon from '../../icon';

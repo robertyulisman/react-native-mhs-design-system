@@ -15,4 +15,5 @@ export interface IButtonProps extends TouchableOpacityProps {
   secondaryRed?: boolean;
   small?: boolean;
   loading?: boolean;
+  theme?: 'primary' | 'secondary' | 'success';
 }

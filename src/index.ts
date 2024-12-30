@@ -1,3 +1,4 @@
+export * as assets from './assets';
 export {
   Accordion,
   AlertModal,
@@ -27,7 +28,24 @@ export {
 } from './component';
 export * as theme from './design-system';
 export * as libs from './libs';
+export {
+  AnimatedNumber,
+  CountDown,
+  PieChart,
+  Shimmering,
+  Switch,
+} from './modules';
 export * as utils from './utils';
-
+/**
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ * export type for all component
+ */
 export type * from './component/type';
 export type * from './design-system/type';
+export type * from './modules/type';

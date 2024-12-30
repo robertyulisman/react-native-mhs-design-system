@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { Animated, Image, StyleSheet } from 'react-native';
-import { ICONS } from '../../assets/icon';
+import { ICONS } from '../../assets/icons';
 import { COLORS, SIZE } from '../../design-system';
 import Text from '../text';
 import type { ToastProps, ToastState } from './type';

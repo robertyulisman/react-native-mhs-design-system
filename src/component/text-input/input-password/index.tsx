@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import { forwardRef, useImperativeHandle, useRef, useState } from 'react';
 import { TextInput, TouchableOpacity, View } from 'react-native';
-import { ICONS } from '../../../assets/icon';
+import { ICONS } from '../../../assets/icons';
 import { COLORS, FONTS } from '../../../design-system';
 import { getFontSize } from '../../../utils';
 import Icon from '../../icon';

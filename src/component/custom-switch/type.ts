@@ -1,3 +1,3 @@
-import type { SwitchProps } from '../../modules/switch';
+import type { ISwitchProps } from '../../modules/type';
 
-export interface ICustomSwitch extends SwitchProps {}
+export interface ICustomSwitch extends ISwitchProps {}

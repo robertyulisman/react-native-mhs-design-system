@@ -1,5 +1,6 @@
 import { Dimensions, type Falsy, type RecursiveArray } from 'react-native';
 import { defaultSystemFonts } from 'react-native-render-html';
+import { FONTS_TYPE } from '../assets';
 import { getFontSize } from '../utils';
 import { createFontStyle, createTransparencyObject, opacities } from './helper';
 import type { Theme } from './type';
@@ -120,23 +121,23 @@ export const COLORS_PALETTE: Theme['COLORS_PALETTE'] = {
 };
 
 export const FONTS: Theme['FONTS'] = {
-  heading1: createFontStyle('Manrope-ExtraBold', 22, 32),
-  heading1Medium: createFontStyle('Manrope-Medium', 22, 32),
-  heading2: createFontStyle('Manrope-Bold', 18, 28),
-  heading2ExtraBold: createFontStyle('Manrope-ExtraBold', 18, 20),
-  heading3: createFontStyle('Manrope-Bold', 16, 24),
-  heading4: createFontStyle('Manrope-Bold', 16, 20),
+  heading1: createFontStyle(FONTS_TYPE.ExtraBold, 22, 32),
+  heading1Medium: createFontStyle(FONTS_TYPE.Medium, 22, 32),
+  heading2: createFontStyle(FONTS_TYPE.Bold, 18, 28),
+  heading2ExtraBold: createFontStyle(FONTS_TYPE.ExtraBold, 18, 20),
+  heading3: createFontStyle(FONTS_TYPE.Bold, 16, 24),
+  heading4: createFontStyle(FONTS_TYPE.Bold, 16, 20),
 
-  label1: createFontStyle('Manrope-Bold', 14, 22),
-  label2: createFontStyle('Manrope-Bold', 12, 18),
-  label2Medium: createFontStyle('Manrope-Medium', 12, 18),
-  label3: createFontStyle('Manrope-Bold', 10, 16),
-  label3Medium: createFontStyle('Manrope-Medium', 10, 16),
+  label1: createFontStyle(FONTS_TYPE.Bold, 14, 22),
+  label2: createFontStyle(FONTS_TYPE.Bold, 12, 18),
+  label2Medium: createFontStyle(FONTS_TYPE.Medium, 12, 18),
+  label3: createFontStyle(FONTS_TYPE.Bold, 10, 16),
+  label3Medium: createFontStyle(FONTS_TYPE.Medium, 10, 16),
 
-  body0: createFontStyle('Manrope-Regular', 16, 18),
-  body1: createFontStyle('Manrope-Regular', 14, 22),
-  body2: createFontStyle('Manrope-Regular', 12, 18),
-  body3: createFontStyle('Manrope-Regular', 10, 16),
+  body0: createFontStyle(FONTS_TYPE.Regular, 16, 18),
+  body1: createFontStyle(FONTS_TYPE.Regular, 14, 22),
+  body2: createFontStyle(FONTS_TYPE.Regular, 12, 18),
+  body3: createFontStyle(FONTS_TYPE.Regular, 10, 16),
 };
 
 export const SIGNATURE_STYLE =

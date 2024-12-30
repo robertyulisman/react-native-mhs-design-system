@@ -4,7 +4,7 @@ import { type FC, useState } from 'react';
 import { ActivityIndicator, TouchableOpacity, View } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import ImageView from 'react-native-image-viewing';
-import { ICONS } from '../../../assets/icon';
+import { ICONS } from '../../../assets/icons';
 import { COLORS } from '../../../design-system';
 import Icon from '../../icon';
 import Text from '../../text';

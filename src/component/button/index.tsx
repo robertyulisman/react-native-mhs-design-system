@@ -22,7 +22,20 @@ const Button: FC<IButtonProps> = (props) => {
     small,
     disabled,
     loading,
+    theme = 'primary',
   } = props;
+
+  const renderBackgroundColor = () => {
+    if (disabled) return COLORS.light[200];
+    if (secondary) return 'transparent';
+    if (primary) {
+      if (theme === 'primary') return COLORS.primary[500];
+      if (theme === 'secondary') return COLORS.secondary[500];
+      if (theme === 'success') return COLORS.success[500];
+    }
+
+    return COLORS.light[50];
+  };
 
   return (
     <TouchableOpacity
@@ -32,13 +45,7 @@ const Button: FC<IButtonProps> = (props) => {
         styles.button,
         // eslint-disable-next-line react-native/no-inline-styles
         {
-          backgroundColor: disabled
-            ? COLORS.light[200]
-            : secondary
-              ? 'transparent'
-              : primary
-                ? COLORS.primary[500]
-                : COLORS.light[50],
+          backgroundColor: renderBackgroundColor(),
           borderWidth: disabled ? 0 : secondary || secondaryRed ? 1 : 0,
           borderColor: secondary
             ? COLORS.light[50]
