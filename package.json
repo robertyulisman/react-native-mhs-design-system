@@ -1,6 +1,6 @@
 {
   "name": "react-native-mhs-design-system",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "types": "./lib/typescript/commonjs/src/index.d.ts",
   "description": "design system for mhs app using react native",
   "source": "./src/index.ts",
@@ -219,3 +219,4 @@
     "sprintf-js": "^1.1.3"
   }
 }
+
