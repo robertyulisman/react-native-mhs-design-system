@@ -1,6 +1,7 @@
 export const IMAGES = {
   badge: require('./badge.png'),
   badgeSuccess: require('./badge-success.png'),
+  bankList: require('./bank_list.png'),
   biometric: require('./biometric.png'),
   calendar: {
     prev: require('./calender-prev.png'),
@@ -23,6 +24,7 @@ export const IMAGES = {
   pinPoint: require('./pinpoint.png'),
   pinPointUser: require('./pinpoint_user.png'),
   profilePicture: require('./profile_picture.png'),
+  profileBackground: require('./profile_background.png'),
   shutterFaceId: require('./shutter-face-id.png'),
   speedometerNeedle: require('./speedometer-needle.png'),
   splash: require('./splash/splashcreen_image.png'),

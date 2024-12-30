@@ -1,6 +1,6 @@
 {
   "name": "react-native-mhs-design-system",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "types": "./lib/typescript/commonjs/src/index.d.ts",
   "description": "design system for mhs app using react native",
   "source": "./src/index.ts",
