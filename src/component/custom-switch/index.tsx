@@ -1,10 +1,10 @@
-import type { FC } from 'react';
+import React from 'react';
 import { StyleSheet } from 'react-native';
 import { COLORS } from '../../design-system';
 import { Switch } from '../../modules';
 import type { ICustomSwitch } from './type';
 
-const CustomSwitch: FC<ICustomSwitch> = ({ ...rest }) => {
+const CustomSwitch: React.FC<ICustomSwitch> = ({ ...rest }) => {
   return (
     <Switch
       containerStyle={styles.container}

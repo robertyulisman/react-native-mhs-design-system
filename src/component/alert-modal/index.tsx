@@ -1,5 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
-import { type FC } from 'react';
+
+import React from 'react';
 import { View } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import Modal from 'react-native-modal';
@@ -8,7 +9,7 @@ import Button from '../button';
 import Text from '../text';
 import type { AlertModalProps } from './type';
 
-const AlertModal: FC<AlertModalProps> = ({
+const AlertModal: React.FC<AlertModalProps> = ({
   title,
   description,
   image,
@@ -18,6 +19,7 @@ const AlertModal: FC<AlertModalProps> = ({
   handlePress,
   titleButtonPrimary,
   imageFull,
+  theme = 'primary',
 }) => {
   return (
     <Modal
@@ -102,6 +104,7 @@ const AlertModal: FC<AlertModalProps> = ({
               marginBottom: 20,
             }}
             small
+            theme={theme}
           />
         )}
       </View>

@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React from 'react';
 import {
   Animated,
   type GestureResponderEvent,
@@ -8,7 +8,10 @@ import {
 } from 'react-native';
 import type { ISwitchProps, ISwitchState } from './type';
 
-export default class Switch extends Component<ISwitchProps, ISwitchState> {
+export default class Switch extends React.Component<
+  ISwitchProps,
+  ISwitchState
+> {
   static defaultProps = {
     value: false,
     onValueChange: () => null,

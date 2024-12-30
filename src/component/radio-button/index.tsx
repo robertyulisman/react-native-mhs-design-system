@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, { useState } from 'react';
+import React from 'react';
 import { View } from 'react-native';
 import Text from '../text';
 import ItemRadioButton from './item-radio-button';
@@ -16,7 +16,7 @@ const RadioButton: React.FC<RadioButtonProps> = ({
   containerStyle,
   label,
 }) => {
-  const [selected, setSelected] = useState<string | null>(null);
+  const [selected, setSelected] = React.useState<string | null>(null);
   const handlePress = (item: RadioButtonItem) => {
     setSelected(item.label);
     onChangeText(item);

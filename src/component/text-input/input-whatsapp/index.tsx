@@ -1,12 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 
-import {
-  forwardRef,
-  useCallback,
-  useImperativeHandle,
-  useRef,
-  useState,
-} from 'react';
+import React from 'react';
 import { TextInput, View } from 'react-native';
 import { ICONS } from '../../../assets/icons';
 import { COLORS, FONTS } from '../../../design-system';
@@ -14,7 +8,7 @@ import Text from '../../text';
 import RenderIcon from '../component/render-icon';
 import type { IInputWhatsappProps, InputHandle } from '../type';
 
-const InputWhatsapp = forwardRef<InputHandle, IInputWhatsappProps>(
+const InputWhatsapp = React.forwardRef<InputHandle, IInputWhatsappProps>(
   (props, ref) => {
     const {
       onChangeText,
@@ -28,19 +22,19 @@ const InputWhatsapp = forwardRef<InputHandle, IInputWhatsappProps>(
       disabled,
     } = props;
 
-    const textInputRef = useRef<TextInput>(null);
+    const textInputRef = React.useRef<TextInput>(null);
 
-    useImperativeHandle(ref, () => ({
+    React.useImperativeHandle(ref, () => ({
       focus: () => textInputRef.current?.focus(),
     }));
 
-    const [isFocus, setIsFocus] = useState(false);
+    const [isFocus, setIsFocus] = React.useState(false);
 
-    const handleOnfocus = useCallback(() => {
+    const handleOnfocus = React.useCallback(() => {
       setIsFocus(true);
     }, []);
 
-    const handleOnblur = useCallback(() => {
+    const handleOnblur = React.useCallback(() => {
       setIsFocus(false);
     }, []);
 

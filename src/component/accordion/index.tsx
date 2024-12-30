@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import { type FC, type PropsWithChildren, useEffect, useState } from 'react';
+import React from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import Animated, {
   Easing,
@@ -14,7 +14,9 @@ import Icon from '../icon';
 import Text from '../text';
 import type { IAccordionProps } from './type';
 
-const Accordion: FC<PropsWithChildren<IAccordionProps>> = (props) => {
+const Accordion: React.FC<React.PropsWithChildren<IAccordionProps>> = (
+  props
+) => {
   const {
     parentContainerStyles,
     bodyStyles,
@@ -30,7 +32,7 @@ const Accordion: FC<PropsWithChildren<IAccordionProps>> = (props) => {
     children,
   } = props;
 
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = React.useState(false);
   const animatedHeightValue = useSharedValue(0);
   const bodyHeight = useSharedValue(0);
 
@@ -82,7 +84,7 @@ const Accordion: FC<PropsWithChildren<IAccordionProps>> = (props) => {
     };
   });
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (typeof isOpen === 'boolean') {
       toggleAnimationValue(isOpen);
     }

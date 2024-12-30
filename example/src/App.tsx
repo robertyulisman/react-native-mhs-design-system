@@ -4,10 +4,6 @@ import { Button, Text, theme } from 'react-native-mhs-design-system';
 
 interface IAppProps {}
 
-// const { GIFFS, ICONS, IMAGES, FONTS_TYPE, LOTTIES_FILE } = assets;
-
-// FONTS_TYPE.Bold;
-
 const App: FC<IAppProps> = () => {
   return (
     <View style={styles.container}>

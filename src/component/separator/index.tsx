@@ -1,9 +1,9 @@
-import type { FC } from 'react';
+import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { COLORS } from '../../design-system';
 import type { SeparatorProps } from './type';
 
-const Separator: FC<SeparatorProps> = ({ dashed, high, style }) => {
+const Separator: React.FC<SeparatorProps> = ({ dashed, high, style }) => {
   return (
     <View
       style={[

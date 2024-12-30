@@ -1,8 +1,8 @@
-import type { FC } from 'react';
+import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
 import type { iconProps } from './type';
 
-const Icon: FC<iconProps> = (props) => {
+const Icon: React.FC<iconProps> = (props) => {
   const {
     width = 22,
     height = 22,

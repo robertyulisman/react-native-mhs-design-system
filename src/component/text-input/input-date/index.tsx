@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-shadow */
 import moment from 'moment';
-import { type FC, useState } from 'react';
+
+import React from 'react';
 import {
   type StyleProp,
   StyleSheet,
@@ -27,7 +28,7 @@ interface IInputDateProps {
   onChangeText: (text: string) => void | undefined;
 }
 
-const InputDate: FC<IInputDateProps> = (props) => {
+const InputDate: React.FC<IInputDateProps> = (props) => {
   const {
     onChangeText,
     value,
@@ -41,8 +42,8 @@ const InputDate: FC<IInputDateProps> = (props) => {
     primary,
   } = props;
 
-  const [date, setDate] = useState(new Date());
-  const [open, setOpen] = useState(false);
+  const [date, setDate] = React.useState(new Date());
+  const [open, setOpen] = React.useState(false);
 
   const handleConfirm = (date: any) => {
     setDate(date);

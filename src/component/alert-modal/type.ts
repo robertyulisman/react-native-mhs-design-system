@@ -1,3 +1,5 @@
+import type { IButtonProps } from '../type';
+
 export type AlertModalProps = {
   show: boolean;
   handleClose?: () => void;
@@ -8,4 +10,5 @@ export type AlertModalProps = {
   buttonPrimary?: boolean;
   titleButtonPrimary?: string;
   imageFull?: boolean;
+  theme?: IButtonProps['theme'];
 };

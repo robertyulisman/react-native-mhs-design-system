@@ -1,3 +1,30 @@
 export const IMAGES = {
-  // aktifitasMagang: require('./aktifitas_magang.png'),
+  badge: require('./badge.png'),
+  badgeSuccess: require('./badge-success.png'),
+  biometric: require('./biometric.png'),
+  calendar: {
+    prev: require('./calender-prev.png'),
+    next: require('./calender-next.png'),
+  },
+  faceId: require('./face-id.png'),
+  intro: {
+    1: require('./illustration/image1.png'),
+    2: require('./illustration/image2.png'),
+    3: require('./illustration/image3.png'),
+  },
+  jadwal: {
+    mataPelajaran: require('./mata-pelajaran.png'),
+    ujian: require('./ujian.png'),
+    ekstrakurikuler: require('./ekstrakurikuler.png'),
+  },
+  kartuPelajar: require('./kartu-pelajar.png'),
+  logoSquare: require('./logo.png'),
+  passcode: require('./passcode.png'),
+  pinPoint: require('./pinpoint.png'),
+  pinPointUser: require('./pinpoint_user.png'),
+  profilePicture: require('./profile_picture.png'),
+  shutterFaceId: require('./shutter-face-id.png'),
+  speedometerNeedle: require('./speedometer-needle.png'),
+  splash: require('./splash/splashcreen_image.png'),
+  timeoutAbsent: require('./timeout-absens.png'),
 };

@@ -1,11 +1,11 @@
-import { type FC, useState } from 'react';
+import React from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import ImageView from 'react-native-image-viewing';
 import { COLORS } from '../../design-system';
 import type { IImagePreviewProps } from './type';
 
-const ImagePreview: FC<IImagePreviewProps> = ({
+const ImagePreview: React.FC<IImagePreviewProps> = ({
   previewEnabled,
   width = 50,
   height = 50,
@@ -14,7 +14,7 @@ const ImagePreview: FC<IImagePreviewProps> = ({
   imageStyle,
   ...rest
 }) => {
-  const [isPreview, setIsPreview] = useState(false);
+  const [isPreview, setIsPreview] = React.useState(false);
 
   return (
     <View>

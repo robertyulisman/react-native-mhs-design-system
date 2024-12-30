@@ -1,10 +1,10 @@
-import type { FC } from 'react';
+import React from 'react';
 import type { TextStyle } from 'react-native';
 import { StyleSheet, Text as TextRN } from 'react-native';
 import { COLORS, FONTS } from '../../design-system';
 import type { ITextProps } from './type';
 
-const Text: FC<ITextProps> = (props) => {
+const Text: React.FC<ITextProps> = (props) => {
   const { style, type, variant, children, ...rest } = props;
   const passedStyles = Array.isArray(style)
     ? Object.assign({}, ...style)

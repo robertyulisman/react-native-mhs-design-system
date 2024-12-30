@@ -1,10 +1,10 @@
-import type { FC } from 'react';
+import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { COLORS } from '../../../design-system';
 import Icon from '../../icon';
 import type { RenderIconProps } from '../type';
 
-const RenderIcon: FC<RenderIconProps> = ({
+const RenderIcon: React.FC<RenderIconProps> = ({
   iconName,
   disabled,
   isFocus,

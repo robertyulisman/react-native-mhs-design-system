@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 
-import { type FC, useState } from 'react';
+import React from 'react';
 import { ActivityIndicator, TouchableOpacity, View } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import ImageView from 'react-native-image-viewing';
@@ -10,7 +10,7 @@ import Icon from '../../icon';
 import Text from '../../text';
 import type { IInputFileCameraProps } from '../type';
 
-const InputFileCamera: FC<IInputFileCameraProps> = (props) => {
+const InputFileCamera: React.FC<IInputFileCameraProps> = (props) => {
   const {
     errorMessage,
     label,
@@ -23,8 +23,8 @@ const InputFileCamera: FC<IInputFileCameraProps> = (props) => {
     apiUrl,
   } = props;
 
-  const [loading, setloading] = useState(false);
-  const [isPreview, setIsPreview] = useState(false);
+  const [loading, setloading] = React.useState(false);
+  const [isPreview, setIsPreview] = React.useState(false);
 
   return (
     <View style={[{ width: '100%' }, containerStyle]}>

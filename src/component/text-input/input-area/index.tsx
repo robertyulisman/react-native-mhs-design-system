@@ -1,11 +1,11 @@
-import { forwardRef, useImperativeHandle, useRef, useState } from 'react';
+import React from 'react';
 import { StyleSheet, TextInput, View } from 'react-native';
 import { COLORS } from '../../../design-system';
 import Text from '../../text';
 import RenderIcon from '../component/render-icon';
 import type { IInputArea, InputHandle } from '../type';
 
-const InputArea = forwardRef<InputHandle, IInputArea>((props, ref) => {
+const InputArea = React.forwardRef<InputHandle, IInputArea>((props, ref) => {
   const {
     onChangeText,
     value,
@@ -20,7 +20,7 @@ const InputArea = forwardRef<InputHandle, IInputArea>((props, ref) => {
     disabled,
   } = props;
 
-  const [isFocus, setIsFocus] = useState(false);
+  const [isFocus, setIsFocus] = React.useState(false);
   const handleOnfocus = () => {
     setIsFocus(true);
   };
@@ -29,8 +29,8 @@ const InputArea = forwardRef<InputHandle, IInputArea>((props, ref) => {
     setIsFocus(false);
   };
 
-  const textInputRef = useRef<TextInput>(null);
-  useImperativeHandle(ref, () => ({
+  const textInputRef = React.useRef<TextInput>(null);
+  React.useImperativeHandle(ref, () => ({
     focus: () => textInputRef.current?.focus(),
   }));
 

@@ -1,12 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
-import {
-  Fragment,
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react';
+
+import React from 'react';
 import type { LayoutChangeEvent } from 'react-native';
 import { Animated, Easing, StyleSheet, View } from 'react-native';
 import { Text } from '../../../component';
@@ -24,13 +18,13 @@ const AnimatedNumber = ({
   containerStyle,
   fontVariant = DEFAULT_FONT_VARIANT,
 }: IAnimatedNumberProps) => {
-  const animationRef = useRef<Animated.CompositeAnimation | null>(null);
+  const animationRef = React.useRef<Animated.CompositeAnimation | null>(null);
   const animateToNumber = toAbsoluteInteger(givenAnimateToNumber);
   const prevNumber = usePrevious(animateToNumber);
   const animateToNumberString = animateToNumber.toString();
   const prevNumberString = prevNumber.toString();
-  const [height, setHeight] = useState(0);
-  const NUMBERS = useMemo(
+  const [height, setHeight] = React.useState(0);
+  const NUMBERS = React.useMemo(
     () =>
       Array(10)
         .fill(null)
@@ -38,19 +32,19 @@ const AnimatedNumber = ({
     []
   );
 
-  const nextNumbersArr = useMemo(() => {
+  const nextNumbersArr = React.useMemo(() => {
     return includeComma
       ? createNumberArrayWithComma(animateToNumberString)
       : Array.from(animateToNumberString, Number);
   }, [animateToNumberString, includeComma]);
 
-  const prevNumbersArr = useMemo(() => {
+  const prevNumbersArr = React.useMemo(() => {
     return includeComma
       ? createNumberArrayWithComma(prevNumberString)
       : Array.from(prevNumberString, Number);
   }, [prevNumberString, includeComma]);
 
-  const animations = useMemo(
+  const animations = React.useMemo(
     () =>
       height === 0
         ? []
@@ -66,11 +60,11 @@ const AnimatedNumber = ({
     [nextNumbersArr, height, prevNumbersArr]
   );
 
-  const setButtonLayout = useCallback((e: LayoutChangeEvent) => {
+  const setButtonLayout = React.useCallback((e: LayoutChangeEvent) => {
     setHeight(e.nativeEvent.layout.height);
   }, []);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (height === 0) return;
 
     if (animationRef.current) {
@@ -102,7 +96,7 @@ const AnimatedNumber = ({
   }, [animations, height]);
 
   return (
-    <Fragment>
+    <React.Fragment>
       {height !== 0 && (
         <View
           style={StyleSheet.flatten([
@@ -169,7 +163,7 @@ const AnimatedNumber = ({
           {animateToNumber}
         </Text>
       </View>
-    </Fragment>
+    </React.Fragment>
   );
 };
 

@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import { type FC, useEffect, useState } from 'react';
+import React from 'react';
 import {
   ActivityIndicator,
   Alert,
@@ -26,7 +26,7 @@ import Text from '../../text';
 import Toast from '../../toast';
 import type { IInputFileUpload } from '../type';
 
-const InputFileUpload: FC<IInputFileUpload> = (props) => {
+const InputFileUpload: React.FC<IInputFileUpload> = (props) => {
   const {
     onChangeFile,
     errorMessage,
@@ -40,11 +40,11 @@ const InputFileUpload: FC<IInputFileUpload> = (props) => {
     apiUrl,
   } = props;
 
-  const [image, setImage] = useState<any>(null);
-  const [loading, setLoading] = useState(false);
-  const [types, setTypes] = useState('');
-  const [open, setOpen] = useState(false);
-  const [isPreview, setIsPreview] = useState(false);
+  const [image, setImage] = React.useState<any>(null);
+  const [loading, setLoading] = React.useState(false);
+  const [types, setTypes] = React.useState('');
+  const [open, setOpen] = React.useState(false);
+  const [isPreview, setIsPreview] = React.useState(false);
 
   const handleOpenFile = async () => {
     setOpen(true);
@@ -208,7 +208,7 @@ const InputFileUpload: FC<IInputFileUpload> = (props) => {
     }, 1000);
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     setImage(value ?? null);
   }, [value]);
 

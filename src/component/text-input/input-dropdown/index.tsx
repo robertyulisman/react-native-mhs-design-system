@@ -1,4 +1,4 @@
-import { type FC, useEffect, useState } from 'react';
+import React from 'react';
 import { ScrollView, StyleSheet, TouchableOpacity, View } from 'react-native';
 import Modal from 'react-native-modal';
 import { ICONS } from '../../../assets/icons';
@@ -8,7 +8,7 @@ import Icon from '../../icon';
 import Text from '../../text';
 import type { IInputDropdown } from '../type';
 
-const InputDropdown: FC<IInputDropdown> = ({
+const InputDropdown: React.FC<IInputDropdown> = ({
   onChangeText,
   value,
   errorMessage,
@@ -21,9 +21,11 @@ const InputDropdown: FC<IInputDropdown> = ({
   data,
   disabled,
 }) => {
-  const [itemSelected, setItemSelected] = useState<any>(null);
-  const [defaultValue, setDefaultValue] = useState<string | undefined>('');
-  const [open, setOpen] = useState(false);
+  const [itemSelected, setItemSelected] = React.useState<any>(null);
+  const [defaultValue, setDefaultValue] = React.useState<string | undefined>(
+    ''
+  );
+  const [open, setOpen] = React.useState(false);
 
   const handleSelect = (item: any) => {
     setItemSelected(item);
@@ -33,7 +35,7 @@ const InputDropdown: FC<IInputDropdown> = ({
     }, 300);
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (data !== undefined) {
       const filtered = data?.filter((item: any) => item.value === value);
 

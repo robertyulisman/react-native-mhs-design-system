@@ -1,12 +1,11 @@
-import type { FC } from 'react';
-import { Fragment } from 'react';
+import React from 'react';
 import { ActivityIndicator, StyleSheet, TouchableOpacity } from 'react-native';
 import { COLORS } from '../../design-system';
 import Icon from '../icon';
 import Text from '../text';
 import type { IButtonProps } from './type';
 
-const Button: FC<IButtonProps> = (props) => {
+const Button: React.FC<IButtonProps> = (props) => {
   const {
     title,
     onPress,
@@ -59,7 +58,7 @@ const Button: FC<IButtonProps> = (props) => {
       ]}
     >
       {iconNameLeft ? (
-        <Fragment>
+        <React.Fragment>
           {loading ? (
             <ActivityIndicator style={styles.indicator} />
           ) : (
@@ -73,7 +72,7 @@ const Button: FC<IButtonProps> = (props) => {
               containerStyle={styles.iconLeft}
             />
           )}
-        </Fragment>
+        </React.Fragment>
       ) : loading ? (
         <ActivityIndicator
           color={COLORS.primary['500']}

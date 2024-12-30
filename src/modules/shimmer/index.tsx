@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import {
   Animated,
   Dimensions,
@@ -20,8 +20,8 @@ const Shimmering: React.FC<IShimmeringProps> = ({
   gradientStyle,
   wrapperStyle,
 }) => {
-  const [viewWidth, setViewWidth] = useState<number>(-1);
-  const animation = useRef(
+  const [viewWidth, setViewWidth] = React.useState<number>(-1);
+  const animation = React.useRef(
     Animated.loop(
       Animated.timing(shimmeringAnimatedValue, {
         useNativeDriver: false,
@@ -34,7 +34,7 @@ const Shimmering: React.FC<IShimmeringProps> = ({
 
   const gradientColors = [GREY, COLORS.light['50'], GREY];
 
-  useEffect(() => {
+  React.useEffect(() => {
     startAnimation();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

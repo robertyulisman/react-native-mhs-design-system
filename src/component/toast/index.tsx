@@ -1,11 +1,11 @@
-import { Component } from 'react';
+import React from 'react';
 import { Animated, Image, StyleSheet } from 'react-native';
 import { ICONS } from '../../assets/icons';
 import { COLORS, SIZE } from '../../design-system';
 import Text from '../text';
 import type { ToastProps, ToastState } from './type';
 
-export class Toast extends Component<{}, ToastState> {
+export class Toast extends React.Component<{}, ToastState> {
   static myComponentInstance: Toast;
   animatedValue: Animated.Value;
 

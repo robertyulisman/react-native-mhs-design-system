@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, { type ComponentType } from 'react';
+import React from 'react';
 import { AppState, StyleSheet, TouchableOpacity, View } from 'react-native';
 import { sprintf } from 'sprintf-js';
 import { Text } from '../../component';
@@ -195,7 +195,7 @@ class CountDown extends React.Component<ICountDownProps, ICountDownState> {
       minutes,
       seconds
     ).split(':');
-    const Component: ComponentType<any> = this.props.onPress
+    const Component: React.ComponentType<any> = this.props.onPress
       ? TouchableOpacity
       : View;
 

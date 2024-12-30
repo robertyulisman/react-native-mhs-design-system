@@ -1,10 +1,10 @@
-import { Fragment, type FC } from 'react';
+import React from 'react';
 import { StyleSheet, View, type StyleProp, type TextStyle } from 'react-native';
 import { COLORS } from '../../design-system';
 import Text from '../text';
 import type { paragrafProps } from './type';
 
-const Paragraf: FC<paragrafProps> = ({
+const Paragraf: React.FC<paragrafProps> = ({
   keyText,
   valueText,
   separator,
@@ -28,7 +28,7 @@ const Paragraf: FC<paragrafProps> = ({
   const valueTextVariant = bold || boldRight ? 'label-1' : 'body-1';
 
   return (
-    <Fragment>
+    <React.Fragment>
       <View style={[styles.container, containerStyle]}>
         <View style={[styles.keyContainer, styleKey]}>
           <Text
@@ -60,7 +60,7 @@ const Paragraf: FC<paragrafProps> = ({
         )}
       </View>
       {children}
-    </Fragment>
+    </React.Fragment>
   );
 };
 

@@ -11,4 +11,5 @@ export type headerProps = {
   onBack?: () => void;
   transparent?: boolean;
   containerStyle?: StyleProp<ViewStyle>;
+  theme?: 'primary' | 'secondary' | 'success';
 };

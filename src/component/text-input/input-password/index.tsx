@@ -1,5 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
-import { forwardRef, useImperativeHandle, useRef, useState } from 'react';
+
+import React from 'react';
 import { TextInput, TouchableOpacity, View } from 'react-native';
 import { ICONS } from '../../../assets/icons';
 import { COLORS, FONTS } from '../../../design-system';
@@ -8,7 +9,7 @@ import Icon from '../../icon';
 import Text from '../../text';
 import type { IInputPasswordProps, InputHandle } from '../type';
 
-const InputPassword = forwardRef<InputHandle, IInputPasswordProps>(
+const InputPassword = React.forwardRef<InputHandle, IInputPasswordProps>(
   (props, ref) => {
     const {
       onChangeText,
@@ -24,11 +25,11 @@ const InputPassword = forwardRef<InputHandle, IInputPasswordProps>(
       disabled,
     } = props;
 
-    const [showPassword, setShowPassword] = useState(true);
-    const [isFocus, setIsFocus] = useState(false);
-    const textInputRef = useRef<TextInput>(null);
+    const [showPassword, setShowPassword] = React.useState(true);
+    const [isFocus, setIsFocus] = React.useState(false);
+    const textInputRef = React.useRef<TextInput>(null);
 
-    useImperativeHandle(ref, () => ({
+    React.useImperativeHandle(ref, () => ({
       focus: () => textInputRef.current?.focus(),
     }));
 

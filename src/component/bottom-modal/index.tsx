@@ -1,11 +1,12 @@
 /* eslint-disable react-native/no-inline-styles */
-import type { FC, PropsWithChildren } from 'react';
+
+import React from 'react';
 import { View } from 'react-native';
 import Modal from 'react-native-modal';
 import { COLORS } from '../../design-system';
 import type { IBottomModalProps } from './type';
 
-const BottomModal: FC<PropsWithChildren<IBottomModalProps>> = ({
+const BottomModal: React.FC<React.PropsWithChildren<IBottomModalProps>> = ({
   children,
   open,
   onClose,

@@ -1,4 +1,7 @@
-export * as assets from './assets';
+/**
+ *
+ * export all common component
+ */
 export {
   Accordion,
   AlertModal,
@@ -26,8 +29,11 @@ export {
   TextHighlighted,
   Toast,
 } from './component';
-export * as theme from './design-system';
-export * as libs from './libs';
+
+/**
+ *
+ * export all modules component
+ */
 export {
   AnimatedNumber,
   CountDown,
@@ -35,16 +41,48 @@ export {
   Shimmering,
   Switch,
 } from './modules';
-export * as utils from './utils';
+
 /**
  *
+ * export all as assets
+ * FONTS_TYPE, GIFFS, ICONS, IMAGES, LOTTIES_FILE
+ */
+export * as assets from './assets';
+
+/**
  *
+ * export all as design-system
  *
+ * COLORS,
+ * COLORS_PALETTE,
+ * FONTS,
+ * SIGNATURE_STYLE,
+ * SIZE,
+ * SYSTEMFONTS,
+ * TAGSTYLES
+ */
+export * as theme from './design-system';
+
+/**
  *
+ * export all as libs
  *
+ * getAllAsyncStorage
+ * getAsyncStorage
+ * removeAsyncStorage
+ * setAsyncStorage
+ */
+export * as libs from './libs';
+
+/**
  *
+ * export all as utils
+ */
+export * as utils from './utils';
+
+/**
  *
- * export type for all component
+ * export all type for all component
  */
 export type * from './component/type';
 export type * from './design-system/type';

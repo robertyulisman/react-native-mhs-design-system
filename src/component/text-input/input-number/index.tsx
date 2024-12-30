@@ -1,6 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable @typescript-eslint/no-shadow */
-import { type FC, useEffect, useState } from 'react';
+
+import React from 'react';
 import { TouchableOpacity, View } from 'react-native';
 import { ICONS } from '../../../assets/icons';
 import { COLORS } from '../../../design-system';
@@ -8,7 +9,7 @@ import Icon from '../../icon';
 import Text from '../../text';
 import type { IInputNumberProps } from '../type';
 
-const InputNumber: FC<IInputNumberProps> = (props) => {
+const InputNumber: React.FC<IInputNumberProps> = (props) => {
   const {
     onChangeText,
     errorMessage,
@@ -19,7 +20,7 @@ const InputNumber: FC<IInputNumberProps> = (props) => {
     value = 0,
   } = props;
 
-  const [number, setNumber] = useState<number>(0);
+  const [number, setNumber] = React.useState<number>(0);
 
   const handleAddNumber = () => {
     setNumber((number) => number + 1);
@@ -33,7 +34,7 @@ const InputNumber: FC<IInputNumberProps> = (props) => {
     }
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (value !== 0 || value !== undefined) {
       setNumber(+value);
     }

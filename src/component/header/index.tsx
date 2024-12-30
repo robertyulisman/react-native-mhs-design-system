@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import { type FC } from 'react';
+import React from 'react';
 import {
   TouchableOpacity,
   View,
@@ -19,7 +19,11 @@ export type closeProps = {
   containerStyle?: StyleProp<ViewStyle>;
 };
 
-const Close: FC<closeProps> = ({ onPress, containerStyle, iconStyle }) => {
+const Close: React.FC<closeProps> = ({
+  onPress,
+  containerStyle,
+  iconStyle,
+}) => {
   return (
     <TouchableOpacity
       onPress={onPress}
@@ -45,7 +49,7 @@ const Close: FC<closeProps> = ({ onPress, containerStyle, iconStyle }) => {
   );
 };
 
-const Header: FC<headerProps> = ({
+const Header: React.FC<headerProps> = ({
   back,
   close,
   onClose,
@@ -55,12 +59,22 @@ const Header: FC<headerProps> = ({
   customComponent,
   transparent,
   containerStyle,
+  theme = 'primary',
 }) => {
+  const renderBackgroundColor = () => {
+    if (transparent) return 'transparent';
+
+    if (theme === 'primary') return COLORS.primary[500];
+    if (theme === 'secondary') return COLORS.secondary[500];
+    if (theme === 'success') return COLORS.success[500];
+
+    return COLORS.primary[500];
+  };
   return (
     <View
       style={[
         {
-          backgroundColor: transparent ? 'transparent' : COLORS.primary[500],
+          backgroundColor: renderBackgroundColor(),
           height: 100,
           position: 'relative',
         },

@@ -1,17 +1,11 @@
-import {
-  forwardRef,
-  useCallback,
-  useImperativeHandle,
-  useRef,
-  useState,
-} from 'react';
+import React from 'react';
 import { StyleSheet, TextInput, View } from 'react-native';
 import { COLORS } from '../../../design-system';
 import Text from '../../text';
 import RenderIcon from '../component/render-icon';
 import type { IInputProps, InputHandle } from '../type';
 
-const Input = forwardRef<InputHandle, IInputProps>((props, ref) => {
+const Input = React.forwardRef<InputHandle, IInputProps>((props, ref) => {
   const {
     value,
     errorMessage,
@@ -26,17 +20,17 @@ const Input = forwardRef<InputHandle, IInputProps>((props, ref) => {
     iconPosition,
   } = props;
 
-  const textInputRef = useRef<TextInput>(null);
-  useImperativeHandle(ref, () => ({
+  const textInputRef = React.useRef<TextInput>(null);
+  React.useImperativeHandle(ref, () => ({
     focus: () => textInputRef.current?.focus(),
   }));
 
-  const [isFocus, setIsFocus] = useState(false);
-  const handleOnfocus = useCallback(() => {
+  const [isFocus, setIsFocus] = React.useState(false);
+  const handleOnfocus = React.useCallback(() => {
     setIsFocus(true);
   }, []);
 
-  const handleOnblur = useCallback(() => {
+  const handleOnblur = React.useCallback(() => {
     setIsFocus(false);
   }, []);
 
