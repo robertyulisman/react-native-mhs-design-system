@@ -27,4 +27,5 @@ export const IMAGES = {
   speedometerNeedle: require('./speedometer-needle.png'),
   splash: require('./splash/splashcreen_image.png'),
   timeoutAbsent: require('./timeout-absens.png'),
+  personModal: require('./illustration/person_modal.png'),
 };
