@@ -30,4 +30,9 @@ export const IMAGES = {
   splash: require('./splash/splashcreen_image.png'),
   timeoutAbsent: require('./timeout-absens.png'),
   personModal: require('./illustration/person_modal.png'),
+  celebrate: require('./illustration/celebrate.png'),
+  personRegistrationSuccess: require('./illustration/person_registration_success.png'),
+  person: require('./illustration/persons.png'),
+  rocket: require('./illustration/rocket.png'),
+  rocketBackground: require('./illustration/rocket_background.png'),
 };
