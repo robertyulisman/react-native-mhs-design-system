@@ -1,5 +1,5 @@
 export const ICONS = {
-  academic: require('@asset/icon/academic.png'),
+  academic: require('./academic.png'),
   aktifitasMagang: require('./aktifitas_magang.png'),
   aktifitasTas: require('./aktifitas_tas.png'),
   aktifitasRiwayatPembayaran: require('./aktifitas_riwayat_pembayaran.png'),
@@ -46,7 +46,7 @@ export const ICONS = {
   logout: require('./logout.png'),
   male: require('./male.png'),
   maleRed: require('./male-red.png'),
-  medal: require('@asset/icon/medal.png'),
+  medal: require('./medal.png'),
   message: require('./message.png'),
   minusFill: require('./minus-fill.png'),
   note: require('./note.png'),
@@ -70,7 +70,7 @@ export const ICONS = {
   warning: require('./warning.png'),
   NRSId: require('./NRS-id.png'),
   feather: require('./feather.png'),
-  userId: require('@asset/icon/user-id.png'),
+  userId: require('./user-id.png'),
   toast: {
     default: require('./toast/default.png'),
     error: require('./toast/error.png'),
